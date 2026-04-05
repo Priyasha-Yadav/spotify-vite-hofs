@@ -41,7 +41,7 @@ function Main() {
 
                 <h2>Good Morning</h2>
                 <div className="songs">
-                    {data.map((i) => (
+                    {data.filter(i => i.id%2==0).map((i) => (
                         <div key={i.id} className="music">
                             <img src={i.img_url} alt={i.title} />
                             <p>{i.title}</p>
